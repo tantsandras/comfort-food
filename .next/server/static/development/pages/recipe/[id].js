@@ -88,7 +88,7 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 3);
+/******/ 	return __webpack_require__(__webpack_require__.s = 5);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -102,7 +102,6 @@ module.exports =
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return Recipe; });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var next_router__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! next/router */ "next/router");
@@ -111,8 +110,13 @@ var _jsxFileName = "/home/sandra/projects/food/pages/recipe/[id].js";
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
-function Recipe() {
-  const router = Object(next_router__WEBPACK_IMPORTED_MODULE_1__["useRouter"])();
+
+function Recipe({
+  router: {
+    query
+  }
+}) {
+  const component = JSON.parse(query.object);
   return __jsx("div", {
     __source: {
       fileName: _jsxFileName,
@@ -125,12 +129,20 @@ function Recipe() {
       lineNumber: 8
     },
     __self: this
-  }, router.query.id));
+  }, query.id), __jsx("p", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 9
+    },
+    __self: this
+  }, component.method));
 }
+
+/* harmony default export */ __webpack_exports__["default"] = (Object(next_router__WEBPACK_IMPORTED_MODULE_1__["withRouter"])(Recipe));
 
 /***/ }),
 
-/***/ 3:
+/***/ 5:
 /*!************************************!*\
   !*** multi ./pages/recipe/[id].js ***!
   \************************************/

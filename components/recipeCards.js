@@ -71,11 +71,19 @@ const RecLink = styled(Browse)`
   margin: 2rem;
 `;
 
-const FoodLink = props => (
-  <Link href="/recipe/[id]" as={`/recipe/${props.id}`}>
-    <RecLink>Get recipe</RecLink>
-  </Link>
-);
+const FoodLink = props => {
+  return (
+    <Link
+      href={{
+        pathname: "/recipe/[id]",
+        query: { object: JSON.stringify(props.recipe) }
+      }}
+      as={`/recipe/${props.id}`}
+    >
+      <RecLink>Get recipe</RecLink>
+    </Link>
+  );
+};
 
 const Data = () => {
   return recipeData.Food.map((item, key) => {
@@ -98,55 +106,6 @@ export default function RecipeCards() {
   return (
     <Recipes>
       <Data />
-      <Food>
-        <PhotoPos>
-          <Photo
-            src="http://drive.google.com/uc?export=view&id=1ukHPHdTpBc7R4JmtX8KRea407M5Ky-JO"
-            alt="Several hands holding beer glasses"
-          />
-          <Summary>
-            <Name>Billions upon billions</Name>
-          </Summary>
-        </PhotoPos>
-        <Text>
-          Made in the interiors of collapsing stars star stuff harvesting star
-          light venture billions upon billions Drake Equation brain is the seed
-          of intelligence?
-        </Text>
-        <FoodLink id={"Billions upon billions"} />
-      </Food>
-      <Food>
-        <PhotoPos>
-          <Photo
-            src="http://drive.google.com/uc?export=view&id=1wAhdZESYZBdd23ek6dnWlm_SJ7PWk65n"
-            alt="Several friends doing a toast"
-          />
-          <Summary>
-            <Name>Drake Equation</Name>
-          </Summary>
-        </PhotoPos>
-        <Text>
-          Another world citizens of distant epochs from which we spring
-          descended from astronomers Orion's sword shores of the cosmic ocean.
-        </Text>
-        <FoodLink id={"Drake Equation"} />
-      </Food>
-      <Food>
-        <PhotoPos>
-          <Photo
-            src="http://drive.google.com/uc?export=view&id=19AjupR0SlV8y0HtzxMtQx2nqF4ERj0mg"
-            alt="Three different glasses of beer"
-          />
-          <Summary>
-            <Name>Vast cosmic arena</Name>
-          </Summary>
-        </PhotoPos>
-        <Text>
-          Galaxies the ash of stellar alchemy prime number science inconspicuous
-          motes of rock and gas brain is the seed of intelligence.
-        </Text>
-        <FoodLink id={"Vast cosmic areana"} />
-      </Food>
     </Recipes>
   );
 }

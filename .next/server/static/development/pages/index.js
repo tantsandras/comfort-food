@@ -179,21 +179,28 @@ const RecLink = styled_components__WEBPACK_IMPORTED_MODULE_1___default()(Browse)
   margin: 2rem;
 `;
 
-const FoodLink = props => __jsx(next_link__WEBPACK_IMPORTED_MODULE_2___default.a, {
-  href: "/recipe/[id]",
-  as: `/recipe/${props.id}`,
-  __source: {
-    fileName: _jsxFileName,
-    lineNumber: 75
-  },
-  __self: undefined
-}, __jsx(RecLink, {
-  __source: {
-    fileName: _jsxFileName,
-    lineNumber: 76
-  },
-  __self: undefined
-}, "Get recipe"));
+const FoodLink = props => {
+  return __jsx(next_link__WEBPACK_IMPORTED_MODULE_2___default.a, {
+    href: {
+      pathname: "/recipe/[id]",
+      query: {
+        object: JSON.stringify(props.recipe)
+      }
+    },
+    as: `/recipe/${props.id}`,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 76
+    },
+    __self: undefined
+  }, __jsx(RecLink, {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 83
+    },
+    __self: undefined
+  }, "Get recipe"));
+};
 
 const Data = () => {
   return _recipes_json__WEBPACK_IMPORTED_MODULE_3__.Food.map((item, key) => {
@@ -201,13 +208,13 @@ const Data = () => {
       key: key,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 83
+        lineNumber: 91
       },
       __self: undefined
     }, __jsx(PhotoPos, {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 84
+        lineNumber: 92
       },
       __self: undefined
     }, __jsx(Photo, {
@@ -215,19 +222,19 @@ const Data = () => {
       alt: item.alt,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 85
+        lineNumber: 93
       },
       __self: undefined
     }), __jsx(Summary, {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 86
+        lineNumber: 94
       },
       __self: undefined
     }, __jsx(Name, {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 87
+        lineNumber: 95
       },
       __self: undefined
     }, item.name))), __jsx(FoodLink, {
@@ -235,7 +242,7 @@ const Data = () => {
       recipe: item,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 91
+        lineNumber: 99
       },
       __self: undefined
     }));
@@ -246,151 +253,16 @@ function RecipeCards() {
   return __jsx(Recipes, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 99
+      lineNumber: 107
     },
     __self: this
   }, __jsx(Data, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 100
-    },
-    __self: this
-  }), __jsx(Food, {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 101
-    },
-    __self: this
-  }, __jsx(PhotoPos, {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 102
-    },
-    __self: this
-  }, __jsx(Photo, {
-    src: "http://drive.google.com/uc?export=view&id=1ukHPHdTpBc7R4JmtX8KRea407M5Ky-JO",
-    alt: "Several hands holding beer glasses",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 103
-    },
-    __self: this
-  }), __jsx(Summary, {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 107
-    },
-    __self: this
-  }, __jsx(Name, {
-    __source: {
-      fileName: _jsxFileName,
       lineNumber: 108
     },
     __self: this
-  }, "Billions upon billions"))), __jsx(Text, {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 111
-    },
-    __self: this
-  }, "Made in the interiors of collapsing stars star stuff harvesting star light venture billions upon billions Drake Equation brain is the seed of intelligence?"), __jsx(FoodLink, {
-    id: "Billions upon billions",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 116
-    },
-    __self: this
-  })), __jsx(Food, {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 118
-    },
-    __self: this
-  }, __jsx(PhotoPos, {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 119
-    },
-    __self: this
-  }, __jsx(Photo, {
-    src: "http://drive.google.com/uc?export=view&id=1wAhdZESYZBdd23ek6dnWlm_SJ7PWk65n",
-    alt: "Several friends doing a toast",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 120
-    },
-    __self: this
-  }), __jsx(Summary, {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 124
-    },
-    __self: this
-  }, __jsx(Name, {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 125
-    },
-    __self: this
-  }, "Drake Equation"))), __jsx(Text, {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 128
-    },
-    __self: this
-  }, "Another world citizens of distant epochs from which we spring descended from astronomers Orion's sword shores of the cosmic ocean."), __jsx(FoodLink, {
-    id: "Drake Equation",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 132
-    },
-    __self: this
-  })), __jsx(Food, {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 134
-    },
-    __self: this
-  }, __jsx(PhotoPos, {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 135
-    },
-    __self: this
-  }, __jsx(Photo, {
-    src: "http://drive.google.com/uc?export=view&id=19AjupR0SlV8y0HtzxMtQx2nqF4ERj0mg",
-    alt: "Three different glasses of beer",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 136
-    },
-    __self: this
-  }), __jsx(Summary, {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 140
-    },
-    __self: this
-  }, __jsx(Name, {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 141
-    },
-    __self: this
-  }, "Vast cosmic arena"))), __jsx(Text, {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 144
-    },
-    __self: this
-  }, "Galaxies the ash of stellar alchemy prime number science inconspicuous motes of rock and gas brain is the seed of intelligence."), __jsx(FoodLink, {
-    id: "Vast cosmic areana",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 148
-    },
-    __self: this
-  })));
+  }));
 }
 
 /***/ }),

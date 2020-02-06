@@ -1,11 +1,14 @@
-import { useRouter } from "next/router";
+import { withRouter } from "next/router";
 
-export default function Recipe() {
-  const router = useRouter();
+function Recipe({ router: { query } }) {
+  const component = JSON.parse(query.object);
 
   return (
     <div>
-      <h1>{router.query.id}</h1>
+      <h1>{query.id}</h1>
+      <p>{component.method}</p>
     </div>
   );
 }
+
+export default withRouter(Recipe);
