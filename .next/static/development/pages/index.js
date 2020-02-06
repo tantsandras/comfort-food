@@ -9,13 +9,15 @@
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return ReceipeCards; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return RecipeCards; });
 /* harmony import */ var _babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/taggedTemplateLiteral */ "./node_modules/@babel/runtime-corejs2/helpers/esm/taggedTemplateLiteral.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.browser.esm.js");
 /* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! next/link */ "./node_modules/next/link.js");
 /* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(next_link__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _recipes_json__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../recipes.json */ "./recipes.json");
+var _recipes_json__WEBPACK_IMPORTED_MODULE_4___namespace = /*#__PURE__*/__webpack_require__.t(/*! ../recipes.json */ "./recipes.json", 1);
 
 var _jsxFileName = "/home/sandra/projects/food/components/recipeCards.js";
 
@@ -113,7 +115,8 @@ function _templateObject() {
 
 
 
-var Receipes = styled_components__WEBPACK_IMPORTED_MODULE_2__["default"].ul(_templateObject());
+
+var Recipes = styled_components__WEBPACK_IMPORTED_MODULE_2__["default"].ul(_templateObject());
 var Food = styled_components__WEBPACK_IMPORTED_MODULE_2__["default"].li(_templateObject2());
 var PhotoPos = styled_components__WEBPACK_IMPORTED_MODULE_2__["default"].figure(_templateObject3());
 var Photo = styled_components__WEBPACK_IMPORTED_MODULE_2__["default"].img(_templateObject4());
@@ -129,35 +132,88 @@ var FoodLink = function FoodLink(props) {
     as: "/recipe/".concat(props.id),
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 74
+      lineNumber: 75
     },
     __self: this
   }, __jsx(RecLink, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 75
+      lineNumber: 76
     },
     __self: this
   }, "Get recipe"));
 };
 
-function ReceipeCards() {
-  return __jsx(Receipes, {
+var Data = function Data() {
+  return _recipes_json__WEBPACK_IMPORTED_MODULE_4__.Food.map(function (item, key) {
+    return __jsx(Food, {
+      key: key,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 83
+      },
+      __self: this
+    }, __jsx(PhotoPos, {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 84
+      },
+      __self: this
+    }, __jsx(Photo, {
+      src: item.photo,
+      alt: item.alt,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 85
+      },
+      __self: this
+    }), __jsx(Summary, {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 86
+      },
+      __self: this
+    }, __jsx(Name, {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 87
+      },
+      __self: this
+    }, item.name))), __jsx(FoodLink, {
+      id: item.name,
+      recipe: item,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 91
+      },
+      __self: this
+    }));
+  });
+};
+
+function RecipeCards() {
+  return __jsx(Recipes, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 81
+      lineNumber: 99
     },
     __self: this
-  }, __jsx(Food, {
+  }, __jsx(Data, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 82
+      lineNumber: 100
+    },
+    __self: this
+  }), __jsx(Food, {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 101
     },
     __self: this
   }, __jsx(PhotoPos, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 83
+      lineNumber: 102
     },
     __self: this
   }, __jsx(Photo, {
@@ -165,44 +221,44 @@ function ReceipeCards() {
     alt: "Several hands holding beer glasses",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 84
+      lineNumber: 103
     },
     __self: this
   }), __jsx(Summary, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 88
+      lineNumber: 107
     },
     __self: this
   }, __jsx(Name, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 89
+      lineNumber: 108
     },
     __self: this
   }, "Billions upon billions"))), __jsx(Text, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 92
+      lineNumber: 111
     },
     __self: this
   }, "Made in the interiors of collapsing stars star stuff harvesting star light venture billions upon billions Drake Equation brain is the seed of intelligence?"), __jsx(FoodLink, {
     id: "Billions upon billions",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 97
+      lineNumber: 116
     },
     __self: this
   })), __jsx(Food, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 99
+      lineNumber: 118
     },
     __self: this
   }, __jsx(PhotoPos, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 100
+      lineNumber: 119
     },
     __self: this
   }, __jsx(Photo, {
@@ -210,44 +266,44 @@ function ReceipeCards() {
     alt: "Several friends doing a toast",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 101
+      lineNumber: 120
     },
     __self: this
   }), __jsx(Summary, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 105
+      lineNumber: 124
     },
     __self: this
   }, __jsx(Name, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 106
+      lineNumber: 125
     },
     __self: this
   }, "Drake Equation"))), __jsx(Text, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 109
+      lineNumber: 128
     },
     __self: this
   }, "Another world citizens of distant epochs from which we spring descended from astronomers Orion's sword shores of the cosmic ocean."), __jsx(FoodLink, {
     id: "Drake Equation",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 113
+      lineNumber: 132
     },
     __self: this
   })), __jsx(Food, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 115
+      lineNumber: 134
     },
     __self: this
   }, __jsx(PhotoPos, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 116
+      lineNumber: 135
     },
     __self: this
   }, __jsx(Photo, {
@@ -255,32 +311,32 @@ function ReceipeCards() {
     alt: "Three different glasses of beer",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 117
+      lineNumber: 136
     },
     __self: this
   }), __jsx(Summary, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 121
+      lineNumber: 140
     },
     __self: this
   }, __jsx(Name, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 122
+      lineNumber: 141
     },
     __self: this
   }, "Vast cosmic arena"))), __jsx(Text, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 125
+      lineNumber: 144
     },
     __self: this
   }, "Galaxies the ash of stellar alchemy prime number science inconspicuous motes of rock and gas brain is the seed of intelligence."), __jsx(FoodLink, {
     id: "Vast cosmic areana",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 129
+      lineNumber: 148
     },
     __self: this
   })));
@@ -13202,6 +13258,17 @@ function Index() {
     __self: this
   }, "\xA9 2020. Sandra Grahl ")));
 }
+
+/***/ }),
+
+/***/ "./recipes.json":
+/*!**********************!*\
+  !*** ./recipes.json ***!
+  \**********************/
+/*! exports provided: Food, default */
+/***/ (function(module) {
+
+module.exports = JSON.parse("{\"Food\":[{\"name\":\"Quick Kale Pizza\",\"alt\":\"Pitta pizza with kale\",\"photo\":\"http://drive.google.com/uc?export=view&id=1ukHPHdTpBc7R4JmtX8KRea407M5Ky-JO\",\"ingredients\":[\"Kale\",\"olive oil\",\"1 tin of chopped tomatoes or 1 tin of tomato passata\",\"1 package of Mozzarella\",\"2 garlic cloves\",\"dried oregano\",\"Ready made Pitta bread\",\"chili flakes\",\"salt\",\"black pepper\",\"Optional: A third of a zucchini and/or fresh mushrooms\"],\"method\":[\"Step 1: Rinse the Kale and put in a bowl. Drizzle with plenty of olive oil. Press two big garlic cloves or three small ones into the kale. Sprinkle with salt. Massage the olive oil, garlic and salt into the kale.\",\"Step 2: Put the oven on 2\"],\"tags\":[\"italian\",\"pizza\",\"quick recipes\"]},{\"name\":\"The Best Vegetarian Lasagna\",\"alt\":\"Lasagna with spinach and selleri\",\"photo\":\"http://drive.google.com/uc?export=view&id=1ukHPHdTpBc7R4JmtX8KRea407M5Ky-JO\"}]}");
 
 /***/ }),
 

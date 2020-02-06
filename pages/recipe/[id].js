@@ -6,7 +6,6 @@ export default function Recipe() {
   return (
     <div>
       <h1>{router.query.id}</h1>
-      <p>{router.query.text}</p>
     </div>
   );
 }

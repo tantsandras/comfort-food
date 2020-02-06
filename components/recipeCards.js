@@ -1,7 +1,8 @@
 import styled from "styled-components";
 import Link from "next/link";
+import recipeData from "../recipes.json";
 
-const Receipes = styled.ul`
+const Recipes = styled.ul`
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   grid-gap: 4rem;
@@ -76,9 +77,27 @@ const FoodLink = props => (
   </Link>
 );
 
-export default function ReceipeCards() {
+const Data = () => {
+  return recipeData.Food.map((item, key) => {
+    return (
+      <Food key={key}>
+        <PhotoPos>
+          <Photo src={item.photo} alt={item.alt} />
+          <Summary>
+            <Name>{item.name}</Name>
+          </Summary>
+        </PhotoPos>
+        {/* <Text>{item.method}</Text> */}
+        <FoodLink id={item.name} recipe={item} />
+      </Food>
+    );
+  });
+};
+
+export default function RecipeCards() {
   return (
-    <Receipes>
+    <Recipes>
+      <Data />
       <Food>
         <PhotoPos>
           <Photo
@@ -128,6 +147,6 @@ export default function ReceipeCards() {
         </Text>
         <FoodLink id={"Vast cosmic areana"} />
       </Food>
-    </Receipes>
+    </Recipes>
   );
 }
